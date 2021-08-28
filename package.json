@@ -1,0 +1,29 @@
+{
+    "name": "lifegpc-sha512-224",
+    "version": "1.0.0",
+    "description": "A Node.js module for hashing messages with MD5.",
+    "main": "./lib/sha512_224.js",
+    "typings": "./lib/sha512_224.d.ts",
+    "author": "lifegpc",
+    "license": "MIT",
+    "repository": {
+        "url": "https://github.com/lifegpc/lifegpc-sha512-224"
+    },
+    "homepage": "https://github.com/lifegpc/lifegpc-sha512-224",
+    "publishConfig": {
+        "access": "public"
+    },
+    "scripts": {
+        "build": "tsc && node clean.js",
+        "test": "node ./lib/sha512_224.test.js"
+    },
+    "dependencies": {
+        "@stablelib/hmac": "^1.0.1",
+        "@stablelib/sha512": "^1.0.1",
+        "array-buffer-to-hex": "^1.0.0"
+    },
+    "devDependencies": {
+        "@types/node": "^16.7.4",
+        "expect": "^27.1.0"
+    }
+}
