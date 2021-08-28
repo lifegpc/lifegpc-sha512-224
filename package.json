@@ -1,5 +1,5 @@
 {
-    "name": "lifegpc-sha512-224",
+    "name": "sha512-224",
     "version": "1.0.0",
     "description": "A Node.js module for hashing messages with MD5.",
     "main": "./lib/sha512_224.js",
