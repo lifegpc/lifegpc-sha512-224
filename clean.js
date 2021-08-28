@@ -9,12 +9,11 @@ function clean(fn) {
         let f = fs.readFileSync(fn, {"encoding": "utf-8"})
         let l = f.split('\n');
         let r = [];
-        let fi = true;
+        let fi = false;
         for (let i = 0; i < l.length; i++) {
-            let s = l[i];
+            let s = l[i].trim();
             if (s.startsWith('exports.') && s.endsWith('= void 0;') && fi) continue;
-            if (s == '"use strict";');
-            else if (s.startsWith('Object.defineProperty(exports,'));
+            if (s.startsWith('Object.defineProperty(exports,')) fi = true;
             else fi = false;
             r.push(s);
         }
@@ -23,4 +22,4 @@ function clean(fn) {
     }
 }
 
-clean("lib/sha1.js")
+clean("lib/sha512_224.js")
